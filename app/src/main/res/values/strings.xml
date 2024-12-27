@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CarScanDemo</string>
+    <string name="loop_detector">Loop Detector</string>
+    <string name="enable_storage_to_continue">Enable Storage to continue</string>
+</resources>

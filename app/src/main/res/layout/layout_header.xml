@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="@dimen/screen_margin"
+            app:layout_constraintTop_toTopOf="parent"
+            android:weightSum="2">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_curve_rectangle"
+                android:src="@drawable/company_logo_two"
+                android:padding="@dimen/_5sdp"
+                android:elevation="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:layout_weight="1.22" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:elevation="@dimen/_5sdp"
+                android:background="@drawable/bg_curve_rectangle"
+                android:layout_weight="0.78">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:weightSum="3">
+
+
+                    <TextView
+                        android:id="@+id/txtDateEn"
+                        android:layout_width="match_parent"
+                        style="@style/TextStyleCenterMedium"
+                        android:layout_height="wrap_content"
+                        android:text="Date English"
+                        android:includeFontPadding="false"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/txt_color_white"
+                        android:textSize="@dimen/_15ssp" />
+
+
+                    <TextView
+                        android:id="@+id/txtTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Time"
+                        style="@style/TextStyleCenterMedium"
+                        android:layout_weight="1"
+                        android:includeFontPadding="false"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/txt_color_white"
+                        android:textSize="@dimen/_15ssp" />
+
+
+                    <TextView
+                        android:id="@+id/txtDateAr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Date English"
+                        style="@style/TextStyleCenterMedium"
+                        android:layout_weight="1"
+                        android:includeFontPadding="false"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/txt_color_white"
+                        android:textSize="@dimen/_15ssp" />
+
+
+
+
+                </LinearLayout>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        </LinearLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+

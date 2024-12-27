@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:id="@+id/txtLoopDetector"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="Loop Detector"
+                    android:textColor="@color/txt_color_primary"
+                    android:visibility="gone"
+                    android:textSize="@dimen/_20ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/greenView"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:background="@android:color/holo_green_dark"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/txtLoopDetector"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/txtLoopDetector" />
+
+                <View
+                    android:id="@+id/redView"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:background="@android:color/holo_red_dark"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/txtLoopDetector"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/txtLoopDetector" />
+
+                <TextView
+                    android:id="@+id/txtButtonPressed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:text="Button Pressed"
+                    android:textColor="@color/txt_color_primary"
+                    android:textSize="@dimen/_20ssp"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtLoopDetector" />
+
+                <TextView
+                    android:id="@+id/txtButtonPressedValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:text="0"
+                    android:textColor="@color/txt_color_primary"
+                    android:textSize="@dimen/_20ssp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtLoopDetector" />
+
+                <TextView
+                    android:id="@+id/txtCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:text="Barcode"
+                    android:textColor="@color/txt_color_primary"
+                    android:textSize="@dimen/_20ssp"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtButtonPressed" />
+
+                <TextView
+                    android:id="@+id/txtCardValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:text="0"
+                    android:textColor="@color/txt_color_primary"
+                    android:textSize="@dimen/_20ssp"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtButtonPressedValue" />
+
+                <TextView
+                    android:id="@+id/txtRelay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_40sdp"
+                    android:text="Relay"
+                    android:textColor="@color/txt_color_primary"
+                    android:textSize="@dimen/_20ssp"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtCardValue" />
+
+                <LinearLayout
+                    android:id="@+id/linRelay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtRelay">
+
+                    <TextView
+                        android:id="@+id/btnRelayOff"
+                        style="@style/CommonButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/red_color"
+                        android:text="Relay Off"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtButtonPressedValue" />
+
+                    <TextView
+                        android:id="@+id/btnRelayOn"
+                        style="@style/CommonButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/green_color"
+                        android:text="Relay On"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtButtonPressedValue" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtLed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_40sdp"
+                    android:text="Led"
+                    android:visibility="gone"
+                    android:textColor="@color/txt_color_primary"
+                    android:textSize="@dimen/_20ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linRelay" />
+
+                <LinearLayout
+                    android:id="@+id/linLed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtLed">
+
+                    <!-- Checkboxes for Green and Red -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/chkGreen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:buttonTint="@color/green_color"
+                            android:text="Green"
+                            android:textColor="@color/txt_color_primary" />
+
+                        <CheckBox
+                            android:id="@+id/chkRed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:buttonTint="@color/red_color"
+                            android:text="Red"
+                            android:textColor="@color/txt_color_primary" />
+                    </LinearLayout>
+
+                    <!-- LED Buttons -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <TextView
+                            android:id="@+id/btnLedOff"
+                            style="@style/CommonButtonStyle"
+                            android:layout_width="0dp"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/red_color"
+                            android:text="LED Off" />
+
+                        <TextView
+                            android:id="@+id/btnLedBlink"
+                            style="@style/CommonButtonStyle"
+                            android:layout_width="0dp"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/switch_bg_color_checked"
+                            android:text="LED Blink" />
+
+                        <TextView
+                            android:id="@+id/btnLedOn"
+                            style="@style/CommonButtonStyle"
+                            android:layout_width="0dp"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/green_color"
+                            android:text="LED On" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/edtOffset"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:scrollbars="vertical"
+                    android:text="240"
+                    android:visibility="gone"
+                    android:hint="Enter Offset"
+                    android:inputType="number"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btnSetOffset"
+                    app:layout_constraintTop_toBottomOf="@+id/btnPrint" />
+
+                <TextView
+                    android:id="@+id/btnSetOffset"
+                    style="@style/CommonButtonStyle"
+                    android:layout_width="@dimen/_100sdp"
+                    android:backgroundTint="@color/red_color"
+                    android:layout_marginHorizontal="@dimen/screen_margin"
+                    android:layout_height="@dimen/_38sdp"
+                    android:text="Set"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toTopOf="@+id/edtOffset"
+                    app:layout_constraintBottom_toBottomOf="@+id/edtOffset"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
+
+                <TextView
+                    android:id="@+id/btnMainPrint"
+                    style="@style/CommonButtonStyle"
+                    android:layout_width="match_parent"
+                    android:backgroundTint="@color/red_color"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginHorizontal="@dimen/screen_margin"
+                    android:layout_height="@dimen/_38sdp"
+                    android:text="print"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/edtOffset"
+                    />
+
+                <TextView
+                    android:id="@+id/btnPosition"
+                    style="@style/CommonButtonStyle"
+                    android:layout_width="match_parent"
+                    android:backgroundTint="@color/red_color"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginHorizontal="@dimen/screen_margin"
+                    android:layout_height="@dimen/_38sdp"
+                    android:text="Check BlackMark Position"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/btnMainPrint"
+                    />
+
+                <TextView
+                    android:id="@+id/btnPositionCut"
+                    style="@style/CommonButtonStyle"
+                    android:layout_width="match_parent"
+                    android:backgroundTint="@color/red_color"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginHorizontal="@dimen/screen_margin"
+                    android:layout_height="@dimen/_38sdp"
+                    android:text="BlackMark Position Cut"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/btnPosition"
+                    />
+
+
+                <!-- Status Buttons -->
+                <LinearLayout
+                    android:id="@+id/linstatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:visibility="gone"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/btnMainPrint"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/btnStatus1"
+                        style="@style/CommonButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/txt_color_secondary"
+                        android:text="Start Timer" />
+
+                    <TextView
+                        android:id="@+id/btnStatus2"
+                        style="@style/CommonButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/txt_color_secondary"
+                        android:text="Stop Timer" />
+
+                    <TextView
+                        android:id="@+id/btnStatus3"
+                        style="@style/CommonButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        android:backgroundTint="@color/txt_color_secondary"
+                        android:text="Status 3" />
+                </LinearLayout>
+
+                <!-- Status Buttons -->
+                <LinearLayout
+                    android:id="@+id/linBelowStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/linstatus"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:id="@+id/btnStatus4"
+                        style="@style/CommonButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/txt_color_secondary"
+                        android:text="Status 4" />
+
+                    <TextView
+                        android:id="@+id/btnStatus5"
+                        style="@style/CommonButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/txt_color_secondary"
+                        android:text="Status 5" />
+
+                    <TextView
+                        android:id="@+id/btnStatus6"
+                        style="@style/CommonButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/txt_color_secondary"
+                        android:text="Status 6" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:text="Status Logs"
+                    android:visibility="gone"
+                    android:textColor="@color/txt_color_primary"
+                    android:textSize="@dimen/_20ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linBelowStatus" />
+
+                <TextView
+                    android:id="@+id/btnPrint"
+                    style="@style/CommonButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:paddingHorizontal="@dimen/_30sdp"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:backgroundTint="@color/red_color"
+                    android:layout_height="@dimen/_38sdp"
+                    android:text="print"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toEndOf="@+id/txtStatus"
+                    app:layout_constraintTop_toTopOf="@+id/txtStatus"
+                    app:layout_constraintBottom_toBottomOf="@+id/txtStatus"
+                    />
+
+                <EditText
+                    android:id="@+id/edtMargin"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:scrollbars="vertical"
+                    android:text=""
+                    android:visibility="gone"
+                    android:hint="Enter Left Margin"
+                    android:inputType="number"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnPrint" />
+
+                <EditText
+                    android:id="@+id/edtLogs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#C0C0C0"
+                    android:scrollbars="vertical"
+                    android:text=""
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtMargin" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

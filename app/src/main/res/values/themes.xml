@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="AppTheme.CarParkingEntryScan" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/app_color</item>
+        <item name="colorPrimaryDark">@color/app_color</item>
+        <item name="colorAccent">@color/color_black</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowBackground">@color/app_bg_color</item>
+        <item name="android:statusBarColor">@color/app_color_status_bar</item>
+        <item name="colorControlActivated">@color/app_bg_dark_color</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+
+    </style>
+
+</resources>

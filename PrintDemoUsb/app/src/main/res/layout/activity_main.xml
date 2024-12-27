@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".com.example.carscandemo.MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="-93dp"
+        tools:layout_editor_absoluteY="-28dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+            <Spinner
+                android:id="@+id/spinner_002"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1" />
+
+
+            <Button
+                android:id="@+id/btn_GetStatus"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Get"
+                android:textAlignment="center"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spinner_001"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1" />
+
+
+            <Button
+                android:id="@+id/btn_Print1"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Print"
+                android:textAlignment="center"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editText4"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:enabled="true"
+                android:hint="Number of cycles"
+                android:text="10"></EditText>
+
+            <Button
+                android:id="@+id/btn_Print4"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Start"
+                android:textAlignment="center"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editText3"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:enabled="true"
+                android:hint="Image file"
+                android:text="">
+
+                <requestFocus />
+            </EditText>
+
+            <Button
+                android:id="@+id/btn_Print3"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Print"
+                android:textAlignment="center"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editText5"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:enabled="true"
+                android:gravity="start"
+                android:hint="Input print content"></EditText>
+
+            <LinearLayout
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <CheckBox
+                    android:id="@+id/checkHex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/checkHex"
+                    android:layout_toLeftOf="@+id/checkHex"
+                    android:text="Hex" />
+
+                <CheckBox
+                    android:id="@+id/checkCut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/checkCut"
+                    android:layout_toLeftOf="@+id/checkCut"
+                    android:text="Cut paper" />
+                <Button
+                    android:id="@+id/btn_Print6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="File"
+                    android:textAlignment="center"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/btn_Print8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+                    android:text="Print"
+                    android:textAlignment="center"
+                    android:textAllCaps="false" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="#C0C0C0"
+                android:enabled="true"
+                android:gravity="top"
+                android:scrollbars="vertical"
+                android:textIsSelectable="true"
+                android:text="" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
