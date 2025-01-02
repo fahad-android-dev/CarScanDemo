@@ -115,12 +115,25 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/_12sdp"
-                    android:layout_marginTop="@dimen/_40sdp"
-                    android:text="Relay"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:text="Data Size"
                     android:textColor="@color/txt_color_primary"
                     android:textSize="@dimen/_20ssp"
-                    android:visibility="gone"
+                    android:visibility="visible"
                     app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtCardValue" />
+
+                <TextView
+                    android:id="@+id/txtDataSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:text="0"
+                    android:textColor="@color/txt_color_primary"
+                    android:textSize="@dimen/_20ssp"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/txtCardValue" />
 
                 <LinearLayout

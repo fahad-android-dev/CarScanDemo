@@ -4,26 +4,18 @@ import android.app.Activity
 import android.content.ContentValues.TAG
 import android.os.Handler
 import android.os.Looper
-import android.os.Message
-import android.util.Log
-import com.example.carscandemo.MainActivity.Companion.edtOffset
-import com.example.carscandemo.MainActivity.Companion.mUsbDriver
-import com.example.carscandemo.MainActivity.Companion.printerQueueList
-import com.example.carscandemo.PrintCmd.CheckStatus5
-import com.example.carscandemo.PrintCmd.GetStatus5
-import com.example.carscandemo.PrintCmd.GetStatusspecialDescriptionEn
-import com.example.carscandemo.UtilsTools.hexStringToBytes
+
 import kotlinx.coroutines.*
 import java.util.regex.Pattern
 
 class PrintThread : Activity(), Runnable {
 
-   // private var mUsbDriver: UsbDriver? = MainActivity.mUsbDriver
+   // private var mUsbDriver: UsbDriver? = com.example.carscandemo.com.example.carscandemo.com.example.carscandemo.com.example.carscandemo.com.example.carscandemo.MainActivity.mUsbDriver
     private var m_blnRun: Boolean = true
     private var isCheckingStatus: Boolean = false
     private var statusCheckingJob: Job? = null // For handling the status-checking coroutine
     private val mainActivity: MainActivity = MainActivity()
-   // private val handler: Handler = MainActivity.MyHandler(mainActivity)
+   // private val handler: Handler = com.example.carscandemo.com.example.carscandemo.com.example.carscandemo.com.example.carscandemo.com.example.carscandemo.MainActivity.MyHandler(mainActivity)
 
     override fun run() {
         Looper.prepare()
@@ -32,7 +24,7 @@ class PrintThread : Activity(), Runnable {
 
         try {
             while (m_blnRun) {
-                if (mUsbDriver != null) {
+                /*if (mUsbDriver != null) {
                     while ((printerQueueList.poll().also { printData = it }) != null) {
                         when (printData?.m_iFunID) {
                             1 -> {
@@ -44,7 +36,7 @@ class PrintThread : Activity(), Runnable {
                                 mUsbDriver?.write(PrintCmd.PrintMarkpositioncut())
                                 mUsbDriver?.write(PrintCmd.PrintCutpaper(0))
 
-                               /* mUsbDriver?.write(PrintCmd.SetLeftmargin(50))
+                               *//* mUsbDriver?.write(PrintCmd.SetLeftmargin(50))
                                 mUsbDriver?.write(PrintCmd.SetCommandmode(3))
                                 mUsbDriver?.write(PrintCmd.SetReadZKmode(1))
                                 val strdata = "1B 74 3F"
@@ -70,7 +62,7 @@ class PrintThread : Activity(), Runnable {
 
                                 mUsbDriver?.write(PrintCmd.PrintFeedline(5))
                                 mUsbDriver?.write(PrintCmd.PrintCutpaper(1))
-*/
+*//*
                             }
 
                             2 -> {
@@ -94,7 +86,7 @@ class PrintThread : Activity(), Runnable {
                     }
                 } else {
                     Thread.sleep(100) // Check periodically if mUsbDriver is null
-                }
+                }*/
             }
         } catch (e: Exception) {
             e.printStackTrace()
